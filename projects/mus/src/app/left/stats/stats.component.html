@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon>bar_chart</mat-icon>
+    <span>EMAITZAK</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        GAUR
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <!-- content here -->
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                        (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>BETIDANIK</mat-panel-title>
+    </mat-expansion-panel-header>
+    <!-- content here -->
+  </mat-expansion-panel>
+</mat-accordion>

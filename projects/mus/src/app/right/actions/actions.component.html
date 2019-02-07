@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon>record_voice_over</mat-icon>
+    <span>ZER DIOK ?</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<form #actionForm (submit)="onSubmit()">
+  <mat-radio-group name="normalAction" [(ngModel)]="selectedAction" *ngIf="!isAnswer">
+    <mat-radio-button value="paso">Paso</mat-radio-button>
+    <mat-radio-button value="enbido">Enbido</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-radio-group name="actionInAnswer" [(ngModel)]="selectedAction" *ngIf="isAnswer">
+    <mat-radio-button value="tira">Tira</mat-radio-button>
+    <mat-radio-button value="eduki">Eduki</mat-radio-button>
+    <mat-radio-button value="gehitu">Gehitu</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-slider [min]="1" [max]="max" [step]="1" [thumbLabel]="true"
+    name="amount" [(ngModel)]="selectedAmount"
+    [disabled]="selectedAction != 'enbido' && selectedAction != 'gehitu'">
+  </mat-slider>
+</form>
