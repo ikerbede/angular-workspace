@@ -10,6 +10,7 @@ import { ActionsComponent } from './right/actions/actions.component';
 import { ChatComponent } from './right/chat/chat.component';
 import { RightComponent } from './right/right.component';
 import { SharedModule } from './shared/shared.module';
+import { CardComponent } from './middle/card/card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SharedModule } from './shared/shared.module';
     ChatComponent,
     ActionsComponent,
     ScoresComponent,
-    StatsComponent
+    StatsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

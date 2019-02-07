@@ -1,0 +1,15 @@
+.mus-card {
+  width: 90px;
+  padding: 10px;
+}
+.mus-card-content {
+  width: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.mus-card-value {
+  margin: 0;
+  font-size: 38px;
+}

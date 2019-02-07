@@ -5,8 +5,22 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-list>
-  <mat-list-item>Lehen taldea</mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>Bigarren taldea</mat-list-item>
-</mat-list>
+<ul class="score-list">
+  <li class="score-list-item" *ngFor="let score of scores">
+    <span>{{ score.players[0] + ' eta ' + score.players[1] }}</span>
+    <mat-chip-list>
+      <mat-chip class="pr-0" color="primary" selected>
+        <span>ttantto</span>
+        <mat-chip class="mr-0" color="accent" selected>{{ score.score % 5 }}</mat-chip>
+      </mat-chip>
+      <mat-chip class="pr-0" color="primary" selected>
+        <span>amar</span>
+        <mat-chip class="mr-0" color="warn" selected>{{ score.score / 5 | floor }}</mat-chip>
+      </mat-chip>
+    </mat-chip-list>
+    <!--
+    <button mat-raised-button color="primary" matBadge="{{ score.score % 5 }}" matBadgeColor="accent">ttantto</button>
+    <button mat-raised-button color="primary" matBadge="{{ score.score / 5 | floor }}" matBadgeColor="warn">amar</button>
+    -->
+  </li>
+</ul>

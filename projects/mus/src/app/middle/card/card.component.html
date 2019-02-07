@@ -1,0 +1,11 @@
+<mat-card class="mus-card">
+  <mat-card-content class="mus-card-content">
+    <button mat-mini-fab color="primary">
+      <mat-icon svgIcon="{{ type }}"></mat-icon>
+    </button>
+    <h1 class="mus-card-value">{{ value }}</h1>
+  </mat-card-content>
+  <mat-card-actions *ngIf="isMusEnabled">
+    <button mat-button>BOTA</button>
+  </mat-card-actions>
+  </mat-card>
