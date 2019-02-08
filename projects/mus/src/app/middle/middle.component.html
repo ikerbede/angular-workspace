@@ -1,3 +1,17 @@
 <div id="middle">
-  <mus-card type="bastoi" value="11"></mus-card>
+  <mat-grid-list cols="4" rowHeight="24%">
+    <mat-grid-tile colspan="4" rowspan="1">
+      <mus-player name="tonio" [isEsku]="false"></mus-player>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="2">
+      <mus-player name="juju" [isEsku]="true"></mus-player>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="2">
+      <mus-player name="niko" [isEsku]="false"></mus-player>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="4" rowspan="1">
+      <mus-player name="iker" [isEsku]="false"></mus-player>
+      <mus-hand></mus-hand>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

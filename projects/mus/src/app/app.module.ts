@@ -11,6 +11,8 @@ import { ChatComponent } from './right/chat/chat.component';
 import { RightComponent } from './right/right.component';
 import { SharedModule } from './shared/shared.module';
 import { CardComponent } from './middle/card/card.component';
+import { HandComponent } from './middle/hand/hand.component';
+import { PlayerComponent } from './middle/player/player.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CardComponent } from './middle/card/card.component';
     ActionsComponent,
     ScoresComponent,
     StatsComponent,
-    CardComponent
+    CardComponent,
+    HandComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
