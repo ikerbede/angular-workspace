@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon>question_answer</mat-icon>
+    <span>SOLASEA</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-list id="message-list">
+  <mat-list-item *ngFor="let message of messages">
+    <!--<img matListAvatar src="..." alt="...">-->
+    <mat-icon matListIcon>account_circle</mat-icon>
+    <p matLine class="message-content">{{ message.content }}</p>
+    <p matLine class="message-date">{{ message.date | date : 'H:mm' }}</p>
+  </mat-list-item>
+</mat-list>
+
+<mat-divider></mat-divider>
+
+<form id="chatForm" #chatForm (submit)="addMessage()">
+  <mat-form-field>
+    <input name="newMessage" matInput placeholder="Idatzak hemen" [(ngModel)]="newMessage"/>
+  </mat-form-field>
+  <button mat-mini-fab>
+    <mat-icon>send</mat-icon>
+  </button>
+</form>

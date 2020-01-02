@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#message-list {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex-grow: 1;
+}
+#message-list > :first-child {
+  margin-top: auto !important;
+}
+#chatForm {
+  padding: 10px 5px 5px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-grow: 0;
+}
+.message-content {
+  word-break: break-word;
+  white-space: normal !important;
+}

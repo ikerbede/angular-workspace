@@ -1,0 +1,13 @@
+<table>
+  <tbody>
+    <tr *ngFor="let attempt of attempts">
+      <td *ngFor="let color of attempt.colors">{{ color }}</td>
+      <td>reds: {{ attempt.reds }} | whites: {{ attempt.whites }}</td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <button type="button" *ngFor="let color of palette" (click)="pickUpColor(color)">
+    {{ color }}
+  </button>
+</div>
